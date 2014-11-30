@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              style="@style/AuthBackground">
+
+    <ImageView
+            android:id="@+id/backgroundImage"
+            style="@style/AuthBackgroundImage"/>
+
+    <TextView
+            android:id="@+id/happyAppTitle"
+            android:text="Happy"
+            style="@style/AuthTitle"
+            android:layout_marginTop="80dp"/>
+
+    <LinearLayout
+            android:id="@+id/allAct"
+            style="@style/AuthFieldContainer"
+            android:layout_marginTop="60dp">
+
+    <TextView
+            android:id="@+id/todayAct"
+            android:text="Task of the Day"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/happyApp"
+            style="@style/AuthTextView"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/karmaLay"
+            style="@style/AuthFieldContainer"
+            android:layout_below="@+id/allAct">
+
+    <TextView
+            android:id="@+id/karma"
+            android:text="Karma"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/AuthTextView"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

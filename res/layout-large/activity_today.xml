@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                style="@style/AuthBackground">
+
+    <TextView
+            android:id="@+id/activityTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Activity"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="62dp"/>
+
+    <TextView
+            android:id="@+id/doneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Done?"
+            android:textSize="22sp"
+            android:layout_below="@+id/activityTodo"
+            android:layout_alignStart="@+id/activityTodo"
+            android:layout_marginTop="62dp"/>
+
+
+
+    <LinearLayout
+            android:id="@+id/notesLayout"
+            style="@style/NotesFieldContainer"
+            android:layout_below="@+id/doneText">
+
+    <EditText
+            android:id="@+id/editNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Notes"
+            android:textColorHint="@color/light_purple_button"
+            android:textColor="@color/background_purple"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/yesButton"
+            android:layout_toRightOf="@+id/yesButton"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+            android:id="@+id/buttonDivide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/notesLayout"
+            android:src="@drawable/button_divider"/>
+
+    <Button
+            android:id="@+id/uploadButton"
+            android:text="YES"
+            style="@style/AuthButton"
+            android:layout_below="@+id/notesLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/buttonDivide"
+            android:layout_marginRight="0dp"/>
+    <Button
+            android:id="@+id/notdoneButton"
+            android:text="NO"
+            style="@style/AuthButton"
+            android:layout_below="@+id/notesLayout"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/buttonDivide"
+            android:layout_marginLeft="0dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.Happy"
+          android:versionCode="1"
+          android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="19"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+
+    <permission android:protectionLevel="signature"
+                android:name="com.example.Happy.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.example.Happy.permission.C2D_MESSAGE" />
+
+
+    <application
+            android:name=".HappyApplication"
+            android:label="@string/app_name"
+            android:icon="@drawable/ic_launcher"
+            android:allowBackup="true"
+            android:theme="@style/Theme.Happy">
+        <activity android:name="HappyActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".TodayActivity"
+                android:label="Today"
+                android:screenOrientation="portrait"
+                android:parentActivityName=".HappyActivity"/>
+
+        <activity android:name=".KarmaActivity"
+                  android:label="Karma"
+                  android:screenOrientation="portrait"
+                  android:parentActivityName=".HappyActivity"/>
+
+        <service android:name="com.parse.PushService" />
+        <receiver android:name="com.parse.ParseBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.GcmBroadcastReceiver"
+                  android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.example.Happy" />
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+</manifest>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              style="@style/AuthBackground">
+
+    <ImageView
+            android:id="@+id/backgroundImage"
+            style="@style/AuthBackgroundImage"/>
+
+    <TextView
+            android:id="@+id/happyAppTitle"
+            android:text="Happy"
+            style="@style/AuthTitle"
+            android:layout_marginTop="180dp"/>
+
+    <LinearLayout
+            android:id="@+id/allAct"
+            style="@style/AuthFieldContainer"
+            android:layout_marginTop="60dp"
+            android:layout_width="400dp"
+            android:layout_centerHorizontal="true">
+
+    <TextView
+            android:id="@+id/todayAct"
+            android:text="Today's Activity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/happyApp"
+            style="@style/AuthTextView"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/pastActLay"
+            style="@style/AuthFieldContainer"
+            android:layout_below="@+id/allAct"
+            android:layout_width="400dp"
+            android:layout_centerHorizontal="true">
+
+    <TextView
+            android:id="@+id/pastAct"
+            android:text="Past Activities"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/todayAct"
+            style="@style/AuthTextView"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+            android:id="@+id/karmaLay"
+            style="@style/AuthFieldContainer"
+            android:layout_below="@+id/pastActLay"
+            android:layout_width="400dp"
+            android:layout_centerHorizontal="true">
+
+    <TextView
+            android:id="@+id/karma"
+            android:text="Karma"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/happyPoints"
+            style="@style/AuthTextView"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
